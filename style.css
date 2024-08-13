@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');/*IMPORTANDO A FONTE*/
+@import url('/Styles/reset.css');/*RESET CSS*/
+:root {
+    --accent-color: #00651E;
+    --background-color: #191919;
+    --card-color: #3E3E3E;
+    --text-color: #F7F3E3;
+    --second-accent-color: #43B929;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: var(--background-color);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.main__card {
+    background-color: var(--card-color);
+    padding: 2em;
+    max-width: 60%;
+    min-width: 40%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+    position: relative;
+}
+
+.main__card__title {
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+}
+
+.main__card__advice {
+    font-size: 24px;
+    text-align: justify;
+    line-height: 30px;
+    color: var(--text-color);
+}
+
+.main__card__line {
+    display: flex;
+    align-items: center;
+    margin: 1.5em 0;
+}
+
+hr {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.main__card__line-line {
+    width: 100%;
+    height: 2px;
+}
+
+.main__card__line-vert {
+    width: 5px;
+    height: 10px;
+    margin: 0 3px;
+}
+
+.main__card__button {
+    background-color: var(--accent-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    z-index: 2;
+    align-self: center;
+    position: absolute;
+    bottom: -35px;
+}
+
+.main__card__button:hover {
+    background-color: var(--second-accent-color);
+}
+
+.attribution {
+    display: flex;
+    background-color: var(--accent-color);
+    padding: 2em;
+    color: var(--text-color);
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    font-size: 12px;
+}
+
+footer > span > a {
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+@media (max-width:900px) {
+    .main__card {
+        min-width:70%;
+    }
+}
